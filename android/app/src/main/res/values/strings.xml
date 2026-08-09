@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SlandBar</string>
+    <string name="accessibility_label">SlandBar — barra flutuante</string>
+    <string name="accessibility_description">A SlandBar usa o serviço de acessibilidade para detectar gestos na borda da tela, tirar capturas de tela e recolher a barra automaticamente quando o teclado estiver aberto. Nenhum dado pessoal é coletado, armazenado ou compartilhado.</string>
+
+    <!-- Overlay notifications -->
+    <string name="overlay_channel_name">Barra flutuante</string>
+    <string name="overlay_channel_desc">Mantém a barra flutuante de atalhos ativa</string>
+    <string name="overlay_notif_title">SlandBar ativa</string>
+    <string name="overlay_notif_text">Toque para abrir as configurações</string>
+    <string name="overlay_stop_action">Desativar barra</string>
+    <string name="overlay_restart_action">Reiniciar</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Configurações</string>
+    <string name="settings_general">Geral</string>
+    <string name="settings_appearance">Aparência</string>
+    <string name="settings_gestures">Gestos</string>
+    <string name="settings_widgets">Widgets e atalhos</string>
+    <string name="settings_premium">SlandBar Premium</string>
+    <string name="settings_about">Sobre</string>
+    <string name="settings_overlay">Barra flutuante</string>
+    <string name="settings_overlay_on">Ligar barra flutuante</string>
+    <string name="settings_auto_start">Iniciar com o aparelho</string>
+    <string name="settings_auto_hide">Auto-ocultar após inatividade</string>
+    <string name="settings_auto_hide_seconds">Segundos até ocultar</string>
+    <string name="settings_bar_size">Tamanho da barra</string>
+    <string name="settings_bar_size_small">Pequena</string>
+    <string name="settings_bar_size_medium">Média</string>
+    <string name="settings_bar_size_large">Grande</string>
+    <string name="settings_opacity">Opacidade</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_dynamic">Cores dinâmicas (Material You)</string>
+    <string name="settings_theme_dark">Tema escuro</string>
+    <string name="settings_haptics">Vibração ao tocar</string>
+    <string name="settings_haptics_style">Perfil de vibração</string>
+    <string name="settings_haptics_style_soft">Suave</string>
+    <string name="settings_haptics_style_mechanical">Mecânico</string>
+    <string name="settings_haptics_style_deep">Fundo profundo</string>
+    <string name="settings_gesture_tap">Toque simples</string>
+    <string name="settings_gesture_double_tap">Toque duplo</string>
+    <string name="settings_gesture_long_press">Toque longo</string>
+    <string name="settings_gesture_swipe">Deslizar para expandir</string>
+    <string name="settings_shortcuts">Meus atalhos</string>
+    <string name="settings_shortcuts_add">Adicionar atalho</string>
+    <string name="settings_shortcuts_empty">Nenhum atalho ainda. Toque em “+” para adicionar.</string>
+    <string name="settings_widgets_toggle">Widgets disponíveis</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_version">Versão</string>
+    <string name="settings_support">Suporte e política de privacidade</string>
+
+    <!-- Permissions -->
+    <string name="perm_overlay_title">Permitir sobreposição</string>
+    <string name="perm_overlay_message">A SlandBar desenha a barra flutuante por cima de outros aplicativos. Conceda a permissão “Sobre outros aplicativos” para continuar.</string>
+    <string name="perm_overlay_ok">Abrir configurações</string>
+    <string name="perm_notif_title">Notificações</string>
+    <string name="perm_notif_message">Precisamos mostrar uma notificação discreta para manter a barra flutuante ativa em segundo plano.</string>
+    <string name="perm_camera_title">Lanterna</string>
+    <string name="perm_camera_message">Para alternar a lanterna pelos atalhos, precisamos da permissão de câmera (usada apenas para o flash).</string>
+    <string name="perm_settings_title">Ajustar brilho</string>
+    <string name="perm_settings_message">Para controlar o brilho da tela pelos widgets, permita “Modificar configurações do sistema”.</string>
+
+    <!-- Overlay UI -->
+    <string name="overlay_expand">Expandir painel</string>
+    <string name="overlay_collapse">Recolher</string>
+    <string name="overlay_close">Fechar SlandBar</string>
+    <string name="widget_media">Música</string>
+    <string name="widget_timer">Temporizador</string>
+    <string name="widget_toggles">Controles rápidos</string>
+    <string name="widget_brightness">Brilho</string>
+    <string name="widget_volume">Volume</string>
+    <string name="widget_flashlight">Lanterna</string>
+    <string name="widget_screenshot">Captura de tela</string>
+    <string name="widget_camera">Câmera</string>
+    <string name="widget_dnd">Não perturbe</string>
+    <string name="widget_rotate">Rotação</string>
+    <string name="widget_ringer">Modo de som</string>
+    <string name="widget_power">Menu de energia</string>
+    <string name="widget_clock">Relógio</string>
+    <string name="timer_start">Iniciar</string>
+    <string name="timer_pause">Pausar</string>
+    <string name="timer_reset">Zerar</string>
+    <string name="stopwatch_label">Cronômetro</string>
+    <string name="no_media">Nenhuma música tocando</string>
+
+    <!-- Premium -->
+    <string name="premium_title">SlandBar Premium</string>
+    <string name="premium_subtitle">Tudo que você ama, sem limites.</string>
+    <string name="premium_feature_1">Atalhos ilimitados no painel</string>
+    <string name="premium_feature_2">Widget de música com capa do álbum</string>
+    <string name="premium_feature_3">Temas personalizados e cores extras</string>
+    <string name="premium_feature_4">Perfis de vibração avançados</string>
+    <string name="premium_feature_5">Controle de volume do painel</string>
+    <string name="premium_feature_6">Sem anúncios, para sempre</string>
+    <string name="premium_buy">Desbloquear Premium (pagamento único)</string>
+    <string name="premium_restore">Restaurar compra</string>
+    <string name="premium_active">Premium ativo ✓</string>
+    <string name="premium_free_badge">GRÁTIS</string>
+
+    <!-- Widget home screen -->
+    <string name="widget_hs_name">SlandBar rápido</string>
+    <string name="widget_hs_desc">Atalhos rápidos na tela inicial</string>
+    <string name="widget_hs_configure">Configurar</string>
+
+    <string name="app_shortcuts_short_label">Atalho da barra</string>
+    <string name="toast_no_app">Nenhum aplicativo para este atalho</string>
+</resources>

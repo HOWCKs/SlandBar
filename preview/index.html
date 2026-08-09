@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SlandBar — Preview do Frontend</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="workspace">
+
+  <!-- ============ TELEFONE (mockup) ============ -->
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="phone-frame">
+        <div class="screen" id="screen">
+          <div class="statusbar" id="statusbar">
+            <span class="sb-time" id="sbTime">09:41</span>
+            <div class="notch"></div>
+            <span class="sb-right">
+              <span class="sb-signal">▂▄▆</span>
+              <span class="sb-batt">🔋<span id="sbBatt">87</span>%</span>
+            </span>
+          </div>
+
+          <!-- wallpaper fake com "apps" -->
+          <div class="wallpaper">
+            <div class="clock-widget">
+              <div class="cw-time" id="wallTime">09:41</div>
+              <div class="cw-date" id="wallDate">sábado, 9 de agosto</div>
+            </div>
+            <div class="app-grid">
+              <div class="app"><div class="app-ic a1">📷</div><span>Câmera</span></div>
+              <div class="app"><div class="app-ic a2">🎵</div><span>Música</span></div>
+              <div class="app"><div class="app-ic a3">💬</div><span>Chat</span></div>
+              <div class="app"><div class="app-ic a4">🌐</div><span>Navegador</span></div>
+              <div class="app"><div class="app-ic a5">📞</div><span>Telefone</span></div>
+              <div class="app"><div class="app-ic a6">✉️</div><span>E-mail</span></div>
+            </div>
+            <div class="dock">
+              <div class="app"><div class="app-ic a5">📞</div><span></span></div>
+              <div class="app"><div class="app-ic a7">🧭</div><span></span></div>
+              <div class="app"><div class="app-ic a8">🎮</div><span></span></div>
+            </div>
+          </div>
+
+          <!-- BARRA FLUTUANTE (a pílula) -->
+          <div class="floatbar" id="floatbar">
+            <span class="fb-time" id="fbTime">09:41</span>
+            <span class="fb-sep"></span>
+            <span class="fb-batt">🔋<b id="fbBatt">87</b>%</span>
+            <span class="fb-ico fb-torch" id="fbTorchIco" title="Lanterna">🔦</span>
+            <span class="fb-ico fb-music" id="fbMusicIco" title="Música tocando">🎵</span>
+            <span class="fb-grab">⠿</span>
+          </div>
+
+          <!-- PAINEL EXPANDIDO -->
+          <div class="panel-overlay" id="panelOverlay">
+            <div class="panel" id="panel">
+              <div class="p-header">
+                <div class="p-title">
+                  <strong>SlandBar</strong>
+                  <span class="p-date" id="pDate">9 de agosto de 2026</span>
+                </div>
+                <div class="p-btns">
+                  <button class="icon-btn" id="btnCollapse" title="Recolher">▾</button>
+                  <button class="icon-btn" id="btnClose" title="Fechar SlandBar">✕</button>
+                </div>
+              </div>
+
+              <div class="widget" data-w="clock">
+                <div class="w-clock" id="pClock">09:41:00</div>
+              </div>
+
+              <div class="widget" data-w="toggles">
+                <div class="w-title">Controles rápidos</div>
+                <div class="toggles">
+                  <button class="tog" id="togTorch"><span class="tog-ic">🔦</span><span>Lanterna</span></button>
+                  <button class="tog" id="togDnd"><span class="tog-ic">🌙</span><span>DND</span></button>
+                  <button class="tog" id="togRot"><span class="tog-ic">🔄</span><span>Rotação</span></button>
+                  <button class="tog" id="togRing"><span class="tog-ic">🔔</span><span>Som</span></button>
+                </div>
+              </div>
+
+              <div class="widget" data-w="shortcuts">
+                <div class="w-title">Atalhos</div>
+                <div class="shortcuts" id="shortcutGrid"></div>
+              </div>
+
+              <div class="widget" data-w="media">
+                <div class="w-title">Música <span class="tag-premium">PREMIUM</span></div>
+                <div class="media-row">
+                  <div class="album" id="albumArt">🎵</div>
+                  <div class="media-meta">
+                    <div class="m-title" id="mTitle">Neon Horizon</div>
+                    <div class="m-artist" id="mArtist">Aurora Waves</div>
+                    <div class="m-progress"><div class="m-bar" id="mBar"></div></div>
+                  </div>
+                </div>
+                <div class="media-ctrls">
+                  <button class="icon-btn big" id="mPrev">⏮</button>
+                  <button class="play-btn" id="mPlay">▶</button>
+                  <button class="icon-btn big" id="mNext">⏭</button>
+                </div>
+              </div>
+
+              <div class="widget" data-w="timer">
+                <div class="w-title">Temporizador</div>
+                <div class="timer-modes">
+                  <button class="chip" id="chipStopwatch">Cronômetro</button>
+                  <button class="chip" id="chipTimer">Temporizador</button>
+                </div>
+                <div class="t-display" id="tDisplay">00:00</div>
+                <div class="timer-presets" id="timerPresets">
+                  <button class="mini">1 min</button><button class="mini">5 min</button>
+                  <button class="mini">10 min</button><button class="mini">15 min</button>
+                  <button class="mini">25 min</button>
+                </div>
+                <div class="timer-btns">
+                  <button class="btn-primary" id="tStart">▶ Iniciar</button>
+                  <button class="btn-ghost" id="tReset">↺ Zerar</button>
+                </div>
+              </div>
+
+              <div class="widget" data-w="brightness">
+                <div class="w-title">Brilho</div>
+                <div class="slider-row">
+                  <span>🔆</span>
+                  <input type="range" id="brightSlider" min="0" max="100" value="70">
+                </div>
+              </div>
+
+              <div class="widget" data-w="volume">
+                <div class="w-title">Volume <span class="tag-premium">PREMIUM</span></div>
+                <div class="slider-row">
+                  <span>🔊</span>
+                  <input type="range" id="volSlider" min="0" max="100" value="60">
+                </div>
+              </div>
+
+              <div class="premium-hint" id="premiumHint" hidden>
+                ⭐ Widget Premium — desbloqueie em Configurações.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stage-hint">
+      <b>Preview do frontend</b> — toque na barra para expandir, arraste para mover,
+      deslize para cima. <span class="dim">(No app real, tudo isso roda como overlay sobre qualquer app, via Android.)</span>
+    </div>
+  </div>
+
+  <!-- ============ PAINEL DE CONFIGURAÇÃO ============ -->
+  <aside class="config" id="config">
+    <div class="cfg-head">
+      <div class="cfg-logo">S</div>
+      <div>
+        <h1>SlandBar</h1>
+        <p>Personalize como quiser — tudo ao vivo no preview.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>Barra flutuante</h2>
+      <label class="row">
+        <span>Ligar barra flutuante</span>
+        <input type="checkbox" id="cfgEnabled" checked>
+      </label>
+    </section>
+
+    <section>
+      <h2>Aparência</h2>
+      <label class="row"><span>Tamanho</span>
+        <div class="seg" id="segSize">
+          <button data-v="0.8">P</button><button data-v="1" class="on">M</button><button data-v="1.25">G</button>
+        </div>
+      </label>
+      <label class="row"><span>Opacidade <b id="cfgOpacityVal">100%</b></span>
+        <input type="range" id="cfgOpacity" min="40" max="100" value="100">
+      </label>
+      <label class="row"><span>Tema</span>
+        <div class="seg" id="segTheme">
+          <button data-v="system" class="on">Sistema</button><button data-v="light">Claro</button><button data-v="dark">Escuro</button>
+        </div>
+      </label>
+      <label class="row"><span>Cor de destaque</span>
+        <div class="colors" id="colorRow">
+          <button class="dot" data-v="" title="Padrão"></button>
+          <button class="dot" data-v="#6366F1" style="background:#6366F1"></button>
+          <button class="dot" data-v="#0EA5E9" style="background:#0EA5E9"></button>
+          <button class="dot" data-v="#10B981" style="background:#10B981"></button>
+          <button class="dot" data-v="#F43F5E" style="background:#F43F5E"></button>
+          <button class="dot" data-v="#F59E0B" style="background:#F59E0B"></button>
+          <button class="dot" data-v="#8B5CF6" style="background:#8B5CF6"></button>
+        </div>
+      </label>
+    </section>
+
+    <section>
+      <h2>Comportamento</h2>
+      <label class="row"><span>Auto-ocultar após inatividade</span>
+        <input type="checkbox" id="cfgAutoHide" checked>
+      </label>
+      <label class="row"><span>Segundos até ocultar <b id="cfgHideVal">12s</b></span>
+        <input type="range" id="cfgHideSec" min="3" max="30" value="12">
+      </label>
+      <label class="row"><span>Vibração ao tocar</span>
+        <input type="checkbox" id="cfgHaptics" checked>
+      </label>
+    </section>
+
+    <section>
+      <h2>Gestos da barra</h2>
+      <label class="row"><span>Toque simples</span>
+        <select id="gTap"><option value="expand" selected>Expandir painel</option><option value="none">Nenhum</option><option value="flashlight">Lanterna</option><option value="camera">Câmera</option><option value="screenshot">Captura</option><option value="dnd">Não perturbe</option></select>
+      </label>
+      <label class="row"><span>Toque duplo</span>
+        <select id="gDouble"><option value="none" selected>Nenhum</option><option value="flashlight">Lanterna</option><option value="expand">Expandir painel</option><option value="screenshot">Captura</option></select>
+      </label>
+      <label class="row"><span>Toque longo</span>
+        <select id="gLong"><option value="flashlight" selected>Lanterna</option><option value="power">Menu de energia</option><option value="none">Nenhum</option><option value="settings">Configurações</option></select>
+      </label>
+      <label class="row"><span>Deslizar para cima</span>
+        <select id="gSwipe"><option value="expand" selected>Expandir painel</option><option value="none">Nenhum</option></select>
+      </label>
+    </section>
+
+    <section>
+      <h2>Meus atalhos</h2>
+      <div class="shortcut-list" id="scList"></div>
+      <div class="add-sc">
+        <select id="scAdd">
+          <optgroup label="Ações rápidas">
+            <option value="flashlight">🔦 Lanterna</option>
+            <option value="screenshot">📸 Captura de tela</option>
+            <option value="camera">📷 Câmera</option>
+            <option value="dnd">🌙 Não perturbe</option>
+            <option value="rotation">🔄 Rotação</option>
+            <option value="ringer">🔔 Modo de som</option>
+            <option value="power">⚡ Menu de energia</option>
+          </optgroup>
+          <optgroup label="Apps">
+            <option value="app:com.whatsapp">💬 WhatsApp</option>
+            <option value="app:com.spotify">🎵 Spotify</option>
+            <option value="app:com.instagram">📷 Instagram</option>
+            <option value="app:com.youtube">▶ YouTube</option>
+            <option value="app:com.camera">📷 Câmera</option>
+            <option value="app:com.maps">🗺️ Mapas</option>
+          </optgroup>
+        </select>
+        <button class="btn-primary" id="scAddBtn">＋</button>
+      </div>
+      <p class="note" id="scLimitNote">Grátis: até 6 atalhos. Premium: ilimitados.</p>
+    </section>
+
+    <section>
+      <h2>Widgets do painel</h2>
+      <label class="row"><span>Relógio</span><input type="checkbox" data-w="clock" checked class="wchk"></label>
+      <label class="row"><span>Controles rápidos</span><input type="checkbox" data-w="toggles" checked class="wchk"></label>
+      <label class="row"><span>Atalhos</span><input type="checkbox" data-w="shortcuts" checked class="wchk"></label>
+      <label class="row"><span>Cronômetro / Temporizador</span><input type="checkbox" data-w="timer" checked class="wchk"></label>
+      <label class="row"><span>Brilho</span><input type="checkbox" data-w="brightness" checked class="wchk"></label>
+      <label class="row"><span>Música <span class="tag-premium">PREMIUM</span></span><input type="checkbox" data-w="media" class="wchk prem-lock"></label>
+      <label class="row"><span>Volume <span class="tag-premium">PREMIUM</span></span><input type="checkbox" data-w="volume" class="wchk prem-lock"></label>
+    </section>
+
+    <section class="premium-card" id="premiumCard">
+      <h2>⭐ SlandBar Premium</h2>
+      <ul>
+        <li>Atalhos ilimitados no painel</li>
+        <li>Widget de música com capa do álbum</li>
+        <li>Temas e cores personalizadas</li>
+        <li>Perfis de vibração avançados</li>
+        <li>Controle de volume no painel</li>
+      </ul>
+      <p class="note">Pagamento único, sem assinatura. No app real, via Google Play Billing.</p>
+      <button class="btn-premium" id="btnPremium">Desbloquear Premium</button>
+      <button class="btn-ghost" id="btnRestore">Restaurar compra</button>
+    </section>
+
+    <section class="about">
+      <h2>Sobre</h2>
+      <p>App Android nativo (Kotlin + Jetpack Compose). Nenhum dado sai do aparelho.<br>
+      <span class="dim">Este preview reproduz a UI do overlay; o comportamento real (gestos, ações de sistema, captura de tela, lanterna, mídia) é implementado no projeto <code>android/</code>.</span></p>
+    </section>
+  </aside>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

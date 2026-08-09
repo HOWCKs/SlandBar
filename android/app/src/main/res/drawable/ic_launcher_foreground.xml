@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SlandBar adaptive icon foreground: floating pill with a camera cutout -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer glow ring -->
+    <path
+        android:fillColor="#2236E3E8"
+        android:pathData="M24,54 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0" />
+
+    <!-- Main pill -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M22,42 h64 a12,12 0 0 1 12,12 a12,12 0 0 1 -12,12 h-64 a12,12 0 0 1 -12,-12 a12,12 0 0 1 12,-12 z" />
+
+    <!-- Highlight stripe -->
+    <path
+        android:fillColor="#22D3EE"
+        android:pathData="M22,42 h64 a12,12 0 0 1 12,12 a12,12 0 0 1 -12,12 h-64 a12,12 0 0 1 -12,-12 a12,12 0 0 1 12,-12 z"
+        android:fillAlpha="0.35" />
+
+    <!-- Camera cutout -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M54,49.5 a4.5,4.5 0 1,0 0,9 a4.5,4.5 0 1,0 0,-9 z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M54,51.5 a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5 z" />
+
+    <!-- Widget dots -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,51.4 a2.6,2.6 0 1,0 0,5.2 a2.6,2.6 0 1,0 0,-5.2 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M73,51.4 a2.6,2.6 0 1,0 0,5.2 a2.6,2.6 0 1,0 0,-5.2 z" />
+</vector>

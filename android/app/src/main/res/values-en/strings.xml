@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SlandBar</string>
+    <string name="accessibility_label">SlandBar — floating bar</string>
+    <string name="accessibility_description">SlandBar uses the accessibility service to detect edge gestures, take screenshots and auto-hide the bar when the keyboard is open. No personal data is collected, stored or shared.</string>
+
+    <string name="overlay_channel_name">Floating bar</string>
+    <string name="overlay_channel_desc">Keeps the floating shortcuts bar active</string>
+    <string name="overlay_notif_title">SlandBar is active</string>
+    <string name="overlay_notif_text">Tap to open settings</string>
+    <string name="overlay_stop_action">Disable bar</string>
+    <string name="overlay_restart_action">Restart</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_general">General</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_gestures">Gestures</string>
+    <string name="settings_widgets">Widgets &amp; shortcuts</string>
+    <string name="settings_premium">SlandBar Premium</string>
+    <string name="settings_about">About</string>
+    <string name="settings_overlay">Floating bar</string>
+    <string name="settings_overlay_on">Enable floating bar</string>
+    <string name="settings_auto_start">Start on boot</string>
+    <string name="settings_auto_hide">Auto-hide when idle</string>
+    <string name="settings_auto_hide_seconds">Seconds before hiding</string>
+    <string name="settings_bar_size">Bar size</string>
+    <string name="settings_bar_size_small">Small</string>
+    <string name="settings_bar_size_medium">Medium</string>
+    <string name="settings_bar_size_large">Large</string>
+    <string name="settings_opacity">Opacity</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_dynamic">Dynamic colors (Material You)</string>
+    <string name="settings_theme_dark">Dark theme</string>
+    <string name="settings_haptics">Haptic on tap</string>
+    <string name="settings_haptics_style">Vibration profile</string>
+    <string name="settings_haptics_style_soft">Soft</string>
+    <string name="settings_haptics_style_mechanical">Mechanical</string>
+    <string name="settings_haptics_style_deep">Deep thud</string>
+    <string name="settings_gesture_tap">Single tap</string>
+    <string name="settings_gesture_double_tap">Double tap</string>
+    <string name="settings_gesture_long_press">Long press</string>
+    <string name="settings_gesture_swipe">Swipe to expand</string>
+    <string name="settings_shortcuts">My shortcuts</string>
+    <string name="settings_shortcuts_add">Add shortcut</string>
+    <string name="settings_shortcuts_empty">No shortcuts yet. Tap “+” to add one.</string>
+    <string name="settings_widgets_toggle">Available widgets</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_support">Support &amp; privacy policy</string>
+
+    <string name="perm_overlay_title">Allow overlay</string>
+    <string name="perm_overlay_message">SlandBar draws its floating bar on top of other apps. Grant the “Display over other apps” permission to continue.</string>
+    <string name="perm_overlay_ok">Open settings</string>
+    <string name="perm_notif_title">Notifications</string>
+    <string name="perm_notif_message">We show a discreet notification to keep the floating bar alive in the background.</string>
+    <string name="perm_camera_title">Flashlight</string>
+    <string name="perm_camera_message">To toggle the flashlight from shortcuts we need the camera permission (used only for the flash).</string>
+    <string name="perm_settings_title">Adjust brightness</string>
+    <string name="perm_settings_message">To control screen brightness from widgets, allow “Modify system settings”.</string>
+
+    <string name="overlay_expand">Expand panel</string>
+    <string name="overlay_collapse">Collapse</string>
+    <string name="overlay_close">Close SlandBar</string>
+    <string name="widget_media">Music</string>
+    <string name="widget_timer">Timer</string>
+    <string name="widget_toggles">Quick toggles</string>
+    <string name="widget_brightness">Brightness</string>
+    <string name="widget_volume">Volume</string>
+    <string name="widget_flashlight">Flashlight</string>
+    <string name="widget_screenshot">Screenshot</string>
+    <string name="widget_camera">Camera</string>
+    <string name="widget_dnd">Do not disturb</string>
+    <string name="widget_rotate">Rotation</string>
+    <string name="widget_ringer">Sound mode</string>
+    <string name="widget_power">Power menu</string>
+    <string name="widget_clock">Clock</string>
+    <string name="timer_start">Start</string>
+    <string name="timer_pause">Pause</string>
+    <string name="timer_reset">Reset</string>
+    <string name="stopwatch_label">Stopwatch</string>
+    <string name="no_media">No media playing</string>
+
+    <string name="premium_title">SlandBar Premium</string>
+    <string name="premium_subtitle">Everything you love, unlimited.</string>
+    <string name="premium_feature_1">Unlimited panel shortcuts</string>
+    <string name="premium_feature_2">Music widget with album art</string>
+    <string name="premium_feature_3">Custom themes and extra colors</string>
+    <string name="premium_feature_4">Advanced haptic profiles</string>
+    <string name="premium_feature_5">Panel volume control</string>
+    <string name="premium_feature_6">No ads, forever</string>
+    <string name="premium_buy">Unlock Premium (one-time)</string>
+    <string name="premium_restore">Restore purchase</string>
+    <string name="premium_active">Premium active ✓</string>
+    <string name="premium_free_badge">FREE</string>
+
+    <string name="widget_hs_name">SlandBar quick</string>
+    <string name="widget_hs_desc">Quick shortcuts on your home screen</string>
+    <string name="widget_hs_configure">Configure</string>
+
+    <string name="app_shortcuts_short_label">Bar shortcut</string>
+    <string name="toast_no_app">No app for this shortcut</string>
+</resources>

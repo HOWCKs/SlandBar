@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/wbtn_flashlight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_bg"
+            android:contentDescription="@string/widget_flashlight"
+            android:padding="8dp"
+            android:src="@drawable/ic_widget_flashlight" />
+
+        <ImageButton
+            android:id="@+id/wbtn_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_bg"
+            android:contentDescription="@string/widget_camera"
+            android:padding="8dp"
+            android:src="@drawable/ic_widget_camera" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/wbtn_screenshot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_bg"
+            android:contentDescription="@string/widget_screenshot"
+            android:padding="8dp"
+            android:src="@drawable/ic_widget_screenshot" />
+
+        <ImageButton
+            android:id="@+id/wbtn_timer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_bg"
+            android:contentDescription="@string/widget_timer"
+            android:padding="8dp"
+            android:src="@drawable/ic_widget_timer" />
+    </LinearLayout>
+</LinearLayout>
