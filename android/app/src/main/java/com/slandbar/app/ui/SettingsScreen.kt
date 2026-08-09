@@ -73,7 +73,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
-import androidx.lifecycle.compose.LifecycleResumeEffect
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.slandbar.app.BuildConfig
 import com.slandbar.app.MainActivity
 import com.slandbar.app.R
@@ -171,15 +173,21 @@ private fun SettingsScreen(
                 PackageManager.PERMISSION_GRANTED
         )
     }
-    LifecycleResumeEffect(Unit) {
-        canOverlay = AndroidSettings.canDrawOverlays(context)
-        canWriteSettings = AndroidSettings.System.canWrite(context)
-        notifGranted = Build.VERSION.SDK_INT < 33 ||
-            ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) ==
-            PackageManager.PERMISSION_GRANTED
-        cameraGranted = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) ==
-            PackageManager.PERMISSION_GRANTED
-        onPauseOrDispose { }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                canOverlay = AndroidSettings.canDrawOverlays(context)
+                canWriteSettings = AndroidSettings.System.canWrite(context)
+                notifGranted = Build.VERSION.SDK_INT < 33 ||
+                    ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) ==
+                    PackageManager.PERMISSION_GRANTED
+                cameraGranted = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) ==
+                    PackageManager.PERMISSION_GRANTED
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
     val notifLauncher = rememberLauncherForActivityResult(

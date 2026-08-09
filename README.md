@@ -24,6 +24,21 @@ A SlandBar é uma pílula flutuante que fica por cima de **qualquer aplicativo**
 └────────────────────────────────────────────┘
 ```
 
+## 📲 Baixar o APK (compilado pelo GitHub)
+
+O GitHub Actions compila o APK na nuvem e publica em **Releases** — baixe direto no celular:
+
+1. Abra a aba **Releases** do repositório (ou o link fixo abaixo);
+2. Toque em **app-debug.apk** para baixar;
+3. Instale (pode pedir "permitir instalação de apps desconhecidos" — normal para APK fora da Play Store).
+
+Links:
+- Releases: <https://github.com/HOWCKs/SlandBar/releases>
+- APK mais recente: <https://github.com/HOWCKs/SlandBar/releases/latest/download/app-debug.apk>
+
+> Para gerar um novo APK: crie uma tag `v*` (ex.: `v0.9.1`) ou use o botão
+> **"Run workflow"** na aba **Actions → Build APK** — sem precisar de computador.
+
 ## Estrutura do repositório
 
 | Pasta | Conteúdo |
