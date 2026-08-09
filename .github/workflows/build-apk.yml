@@ -23,10 +23,29 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Instalar componentes do Android SDK
+      - name: Garantir Android SDK (android-35)
         run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager --install "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+          set +e
+          SDK="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          echo "Android SDK em: $SDK"
+          ls -1 "$SDK/platforms" 2>/dev/null
+          if [ -d "$SDK/platforms/android-35" ]; then
+            echo "android-35 já presente — nada a fazer"
+            exit 0
+          fi
+          SM="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SM" ]; then
+            echo "Baixando commandlinetools…"
+            mkdir -p "$SDK/cmdline-tools" /tmp/clt
+            curl -sL -o /tmp/clt.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+            unzip -q -o /tmp/clt.zip -d /tmp/clt
+            rm -rf "$SDK/cmdline-tools/latest"
+            mv /tmp/clt/cmdline-tools "$SDK/cmdline-tools/latest"
+            SM="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          fi
+          yes | timeout 120 "$SM" --licenses > /tmp/lic.log 2>&1
+          timeout 300 "$SM" --install "platforms;android-35" "build-tools;35.0.0" 2>&1 | tail -5
+          ls -1 "$SDK/platforms" 2>/dev/null
 
       - name: Configurar Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
