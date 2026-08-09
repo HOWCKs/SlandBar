@@ -12,7 +12,8 @@ class SlandApplication : Application() {
         super.onCreate()
         createOverlayChannel()
         // Se o usuário já ativou a barra, ela volta automaticamente ao abrir o app.
-        OverlayManager.start(this)
+        // (try/catch: em Android 12+ iniciar FGS em background pode lançar exceção)
+        runCatching { OverlayManager.start(this) }
     }
 
     private fun createOverlayChannel() {
